@@ -12,6 +12,7 @@
 		/>
 	</head>
 
+	<script src="main.js"></script>
 	<body>
 		<header>
 			<h1>武汉胜捷飞物流有限公司</h1>
@@ -81,10 +82,32 @@
 			<p>© 2023 武汉胜捷飞物流有限公司. All rights reserved.</p>
 		</footer>
 
-		<a href="consultation.html" class="floating-button" target="_blank"
-			><i class="iconfont icon-zixun"></i
-		></a>
+		<a onclick="toggleWindow()" class="floating-button"><i class="iconfont icon-zixun"></i></a>
+		<div id="consultationWindow">
+			<h1>联系我们</h1>
+			<p>如需了解更多信息或咨询服务，请随时联系我们。我们的团队将竭诚为您提供支持。</p>
 
-		<script src="main.js"></script>
+			<form action="submit.php" method="GET">
+				<button class="close-button" onclick="toggleWindow()"><i class="iconfont icon-close"></i></button>
+				<div class="form-group">
+					<label for="name"><h2>姓名</h2></label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div class="form-group">
+					<label for="email"><h2>电子邮件</h2></label>
+					<input type="email" id="email" name="email" required />
+				</div>
+				<div class="form-group">
+					<label for="phone"><h2>电话号码</h2></label>
+					<input type="tel" id="phone" name="phone" required />
+				</div>
+				<div class="form-group">
+					<label for="phone"><h2>留言板</h2></label>
+					<textarea name="message" placeholder="请输入您的留言" required></textarea><br />
+				</div>
+				<button type="submit" class="submit-button">提交</button>
+			</form>
+			
+		</div>
 	</body>
 </html>

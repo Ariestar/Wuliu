@@ -28,3 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("resize", adjustSectionHeight);
 	window.addEventListener("scroll", handleScroll);
 });
+
+function toggleWindow() {
+	var w = document.querySelector("#consultationWindow");
+	getComputedStyle(w).display == "none" ? (w.style.display = "block") : (w.style.display = "none");
+}
