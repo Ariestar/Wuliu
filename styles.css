@@ -7,6 +7,10 @@ body {
 	color: #333;
 }
 
+li {
+	list-style: none;
+	
+}
 /* 头部样式 */
 header {
 	background-color: #333;
