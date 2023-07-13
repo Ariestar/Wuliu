@@ -1,0 +1,142 @@
+/* 全局样式 */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	color: #333;
+}
+
+/* 头部样式 */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 1.5em;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+	margin-right: 10px;
+	font-size: 1em;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* 主要部分样式 */
+.cta-button {
+	font-size: 2em;
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	padding: 0.5em;
+	text-decoration: none;
+	margin-top: 20px;
+	border-radius: 0.5em;
+	transition: background-color 0.3s ease;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+}
+
+.cta-button:hover {
+	background-color: #555;
+}
+
+.hero .services .about {
+	background-color: #333;
+	color: #fff;
+	padding: 100px;
+	text-align: center;
+}
+
+.hero h2,
+.services h2,
+.about h2,
+.contact h2 {
+	font-size: 4em;
+	margin-top: 0;
+}
+.hero p,
+.services p,
+.about p,
+.contact p {
+	font-size: 1.5em;
+}
+
+/* 页脚样式 */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	font-size: 1em;
+}
+
+.animate-fade-in {
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+section {
+	position: relative;
+	min-height: 100vh;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	scroll-snap-align: start;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+/* 悬浮按钮样式 */
+.floating-button {
+	position: fixed;
+	bottom: 6em;
+	right: 2.5em;
+	background-color: #a78a8a; /* 设置按钮背景颜色为更亮的橙红色 */
+	color: #fff;
+	border: 0.1em solid #76676d;
+	width: 4em; /* 设置按钮宽度 */
+	height: 4em; /* 设置按钮高度 */
+	border-radius: 50%; /* 将按钮形状设置为圆形 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	z-index: 999;
+	transition: background-color 0.3s ease;
+}
+
+.floating-button:hover {
+	background-color: #ff6b64; /* 设置按钮鼠标悬停时的背景颜色为更暗的橙红色 */
+}
