@@ -4,11 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>武汉胜捷飞物流有限公司</title>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles.css" rel="preload" />
+		<link
+			rel="stylesheet"
+			href="http://at.alicdn.com/t/c/font_4165709_lmkmlji8jaf.css"
+			rel="preload"
+		/>
+		<script src="https://unpkg.com/scrollreveal" ></script>
+		<script src="tool.js" async></script>
 	</head>
 
 	<body>
 		<header>
+			<div class="background"></div>
 			<h1>武汉胜捷飞物流有限公司</h1>
 			<nav>
 				<ul>
@@ -21,52 +29,53 @@
 		</header>
 
 		<main>
+			<i class="iconfont icon-feijichang"></i>
 			<section id="hero" class="hero animate-fade-in">
 				<div class="container">
-					<h2>专注于高效物流解决方案</h2>
+					<span class="text">专注于高效物流解决方案</span>
 					<p>
-						我们提供全方位的物流服务，致力于为客户提供优质的解决方案和完善的物流网络。
+						我们提供全方位的航空物流服务，致力于为客户提供优质的解决方案和完善的物流网络。
 					</p>
 					<a href="#hero" class="cta-button">了解更多</a>
 				</div>
 			</section>
-
+			<hr />
 			<section id="about" class="about animate-fade-in">
 				<div class="container">
-					<h2>关于我们</h2>
+					<span class="text">关于我们</span>
 					<p>
-						武汉胜捷飞物流有限公司是一家致力于为客户提供高效物流解决方案的公司。我们拥有先进的设备和专业的团队，为客户提供准时、可靠的物流服务。
+						武汉胜捷飞物流有限公司是一家致力于为客户提供高效航空物流解决方案的公司。我们拥有先进的设备和专业的团队，在全国有五百多个配送点，为客户提供准时、可靠的航空物流服务。
 					</p>
 					<a href="#about" class="cta-button">了解更多</a>
 				</div>
 			</section>
-
+			<hr />
 			<section id="services" class="services animate-fade-in">
 				<div class="container">
-					<h2>我们的服务</h2>
+					<span class="text">我们的服务</span>
 					<p>
 						我们提供各种物流服务，包括货物运输、仓储管理、供应链解决方案等。无论您是个人还是企业，我们都能满足您的物流需求。
 					</p>
 					<a href="service.html" class="cta-button" target="_blank">了解更多</a>
 				</div>
 			</section>
-
+			<hr />
 			<section id="contact" class="contact animate-fade-in">
 				<div class="container">
-					<h2>联系我们</h2>
+					<span class="text">联系我们</span>
 					<p>
 						如需了解更多信息或咨询服务，请随时联系我们。我们的团队将竭诚为您提供支持。
 					</p>
 					<h3>联系方式：</h3>
 					<ul>
-						<li>电话：2230237119 </li>
+						<li>电话：范经理13037110217 17707239783 &nbsp;&nbsp;颜经理13037144271</li>
 						<li>邮箱：2230237119@qq.com</li>
 					</ul>
 					<a
 						href="http://wpa.qq.com/msgrd?v=3&uin=1806771022&site=qq&menu=yes"
 						target="_blank"
 						class="cta-button"
-						>点击咨询</a
+						>QQ咨询</a
 					>
 				</div>
 			</section>
@@ -76,8 +85,35 @@
 			<p>© 2023 武汉胜捷飞物流有限公司. All rights reserved.</p>
 		</footer>
 
-		<a href="consultation.html" class="floating-button" target="_blank">咨询</a>
+		<a onclick="toggleWindow()" class="floating-button"><i class="iconfont icon-zixun"></i></a>
+		<div id="consultationWindow">
+			<h1>联系我们</h1>
+			<p>如需了解更多信息或咨询服务，请随时联系我们。我们的团队将竭诚为您提供支持。</p>
 
-		<script src="main.js"></script>
+			<form action="submit.php" method="GET">
+				<button class="close-button" onclick="toggleWindow()">
+					<i class="iconfont icon-close"></i>
+				</button>
+				<div class="form-group">
+					<label for="name"><h2>姓名</h2></label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div class="form-group">
+					<label for="email"><h2>电子邮件</h2></label>
+					<input type="email" id="email" name="email" required />
+				</div>
+				<div class="form-group">
+					<label for="phone"><h2>电话号码</h2></label>
+					<input type="tel" id="phone" name="phone" required />
+				</div>
+				<div class="form-group">
+					<label for="phone"><h2>留言板</h2></label>
+					<textarea name="message" placeholder="请输入您的留言" required></textarea><br />
+				</div>
+				<button type="submit" class="submit-button">提交</button>
+			</form>
+		</div>
+		<script src="main.js" type="module"></script>
+		<script src="scroll_reveal.js"></script>
 	</body>
 </html>

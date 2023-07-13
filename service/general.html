@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>普通货物</title>
+	<link rel="stylesheet" href="form.css" />
 </head>
+
 <body>
-    
+	<form action="/submit_freight_form" method="post" class="form-group">
+		<h1>普通货物运送表单</h1>
+		<h2>发件人信息</h2>
+		<section>
+			<label for="sender_name">姓名：</label>
+			<input type="text" id="sender_name" name="sender_name" required />
+		</section>
+		<section>
+			<label for="sender_company">公司名称：</label>
+			<input type="text" id="sender_company" name="sender_company" />
+		</section>
+		<section>
+			<label for="sender_phone">联系电话：</label>
+			<input type="tel" id="sender_phone" name="sender_phone" required />
+		</section>
+		<section>
+			<label for="sender_address">发件地址：</label>
+			<input type="text" id="sender_address" name="sender_address" required />
+		</section>
+		<section>
+			<label for="sender_city">城市：</label>
+			<input type="text" id="sender_city" name="sender_city" required />
+		</section>
+		<section>
+			<label for="sender_state">州/省：</label>
+			<input type="text" id="sender_state" name="sender_state" />
+		</section>
+		<section>
+			<label for="sender_zip">邮政编码：</label>
+			<input type="text" id="sender_zip" name="sender_zip" required />
+		</section>
+
+		<h2>收件人信息</h2>
+		<section>
+			<label for="recipient_name">姓名：</label>
+			<input type="text" id="recipient_name" name="recipient_name" required />
+		</section>
+		<section>
+			<label for="recipient_company">公司名称：</label>
+			<input type="text" id="recipient_company" name="recipient_company" />
+		</section>
+		<section>
+			<label for="recipient_phone">联系电话：</label>
+			<input type="tel" id="recipient_phone" name="recipient_phone" required />
+		</section>
+		<section>
+			<label for="recipient_address">收件地址：</label>
+			<input type="text" id="recipient_address" name="recipient_address" required />
+		</section>
+		<section>
+			<label for="recipient_city">城市：</label>
+			<input type="text" id="recipient_city" name="recipient_city" required />
+		</section>
+		<section>
+			<label for="recipient_state">州/省：</label>
+			<input type="text" id="recipient_state" name="recipient_state" />
+		</section>
+		<section>
+			<label for="recipient_zip">邮政编码：</label>
+			<input type="text" id="recipient_zip" name="recipient_zip" required />
+		</section>
+
+		<h2>货物信息</h2>
+		<section>
+			<label for="item_description">货物描述：</label>
+			<textarea id="item_description" name="item_description" required></textarea>
+		</section>
+		<section>
+			<label for="item_quantity">货物数量：</label>
+			<input type="number" id="item_quantity" name="item_quantity" required />
+		</section>
+		<section>
+			<label for="item_weight">货物重量：</label>
+			<input type="text" id="item_weight" name="item_weight" />
+		</section>
+		<section>
+			<label for="item_dimensions">货物尺寸：</label>
+			<input type="text" id="item_dimensions" name="item_dimensions" />
+		</section>
+
+		<h2>特殊要求/备注</h2>
+		<section>
+			<textarea id="special_requests" name="special_requests"></textarea>
+		</section>
+
+		<h2>配送方式</h2>
+		<section>
+			<label><input type="radio" name="delivery_method" value="陆运" required />陆运</label>
+			<label><input type="radio" name="delivery_method" value="航运" required />航运</label>
+			<label><input type="radio" name="delivery_method" value="铁路运输" required />铁路运输</label>
+		</section>
+
+		<input type="submit" class="submit-button" value="提交" />
+	</form>
 </body>
+
 </html>

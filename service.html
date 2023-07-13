@@ -3,25 +3,31 @@
 	<head>
 		<title>服务页面</title>
 		<style>
-			/* 添加样式以适应你的需求 */
-			/* 添加样式以适应你的需求 */
-			body {
-				font-family: Arial, sans-serif;
+			@font-face {
+				font-family: "Source Han Sans";
+				src: url("fonts/SourceHanSansCN-Regular.otf") format("otf");
 			}
+
+			body {
+				font-family: Source Han Sans, Arial, sans-serif;
+			}
+
 			.custom-button {
 				display: inline-block;
-				padding: 10px 20px;
-				font-size: 16px;
+				margin-top: 2em;
+				padding: 0.7em 0.7em;
+				font-size: 1.5em;
 				background-color: #337ab7;
 				color: #fff;
 				border: none;
-				border-radius: 4px;
+				border-radius: 1em;
 				cursor: pointer;
-				transition: background-color 0.3s ease;
+				transition: transform 0.3s ease-in-out;
+				overflow: hidden;
 			}
 
 			.custom-button:hover {
-				background-color: #23527c;
+				transform: scale(1.05);
 			}
 
 			#sidebar {
@@ -29,7 +35,8 @@
 				border-radius: 0.5em;
 				width: 200px;
 				background-color: #f0f0f0;
-				padding: 20px;
+				margin: 1em;
+				padding: 1em;
 				float: left;
 			}
 
@@ -66,12 +73,25 @@
 				padding: 20px;
 			}
 
-			h2 {
+			h1 {
+				font-size: 2.5em;
+				text-shadow: 10px 5px rgba(0, 0, 0, 0.2);
 				color: #333;
 			}
 
 			p {
+				margin: 0.3em;
+				padding: 0 4em;
 				line-height: 1.5;
+				font-size: 1.5em;
+			}
+
+			#content li {
+				margin: 0.3em;
+				padding: 0 4em;
+				line-height: 1.5;
+				font-size: 1.5em;
+				list-style: none;
 			}
 
 			#content .content {
@@ -86,6 +106,7 @@
 			}
 		</style>
 	</head>
+
 	<body>
 		<div id="sidebar">
 			<h2>导航栏</h2>
@@ -101,34 +122,75 @@
 
 		<main id="content">
 			<section id="urgent" class="content">
-				<h2>急件配送</h2>
-				<p>急件配送板块的详细描述和内容。</p>
-				<button onclick="location.href='service/urgent.html'" class="custom-button">急件配送</button>
+				<h1>急件配送</h1>
+				<p>
+					<b>胜捷飞物流公司</b
+					>是一家专业的物流服务提供商，为客户提供全面的急件空运服务。我们专注于迅速、安全地将紧急物品运送到目的地，以满足客户对时间敏感性的需求。我们的急件空运服务具有以下特点：
+				</p>
+				<ul>
+					<li>
+						<b>快速运输</b
+						>：我们与全球各大航空公司建立了紧密的合作关系，利用广泛的航班网络，以最快的速度将货物运送到目的地。我们可以提供最短的转运时间，确保货物迅速抵达。
+					</li>
+					<li>
+						<b>灵活性</b
+						>：我们根据客户的需求和紧急程度，提供不同的服务选项。无论是紧急文件、医疗用品还是其他急需物品，我们都能够提供灵活的解决方案，以满足客户的要求。
+					</li>
+					<li>
+						<b>安全保障</b
+						>：我们重视货物的安全性，采取严格的安全措施和监控系统，确保货物在运输过程中得到妥善保护。我们与专业的包装团队合作，确保货物在运输过程中不受损。
+					</li>
+					<li>
+						<b>全程追踪</b
+						>：我们提供实时的货物追踪服务，让客户能够随时了解货物的位置和运输状态。通过我们的追踪系统，客户可以获得准确的运输信息，从而更好地掌握货物的动态。
+					</li>
+					<li>
+						<b>客户定制化服务</b
+						>：我们了解每个客户的需求都是独特的，因此我们提供个性化的服务。我们的团队将与客户合作，根据其具体要求制定最佳的运输方案，并提供全程支持和咨询服务。
+					</li>
+				</ul>
+				<p>
+					我们将以最高效和可靠的方式将其运送到目的地。无论是紧急救援、紧急供应链需求还是其他紧急物流需求，我们都致力于提供卓越的服务，确保您的货物安全、准时地到达。
+				</p>
+
+				<button onclick="location.href='service/urgent.html'" class="custom-button">
+					急件配送
+				</button>
 			</section>
 			<section id="general" class="content">
-				<h2>普货运送</h2>
+				<h1>普货运送</h1>
 				<p>普货运送板块的详细描述和内容。</p>
-				<button onclick="location.href='service/general.html'" class="custom-button">普货运送</button>
+				<button onclick="location.href='service/general.html'" class="custom-button">
+					普货运送
+				</button>
 			</section>
 			<section id="poultry" class="content">
-				<h2>禽类运输</h2>
+				<h1>禽类运输</h1>
 				<p>禽类运输板块的详细描述和内容。</p>
-				<button onclick="location.href='service/poultry.html'" class="custom-button">禽类运输</button>
+				<button onclick="location.href='service/poultry.html'" class="custom-button">
+					禽类运输
+				</button>
 			</section>
 			<section id="perishable" class="content">
-				<h2>鲜活运输</h2>
+				<h1>鲜活运输</h1>
 				<p>鲜活运输板块的详细描述和内容。</p>
-				<button onclick="location.href='service/perishable.html'" class="custom-button">鲜活运输</button>
+				<button onclick="location.href='service/perishable.html'" class="custom-button">
+					鲜活运输
+				</button>
 			</section>
 			<section id="pharma" class="content">
-				<h2>药品烟草运输</h2>
+				<h1>药品烟草运输</h1>
 				<p>药品烟草运输板块的详细描述和内容。</p>
-				<button onclick="location.href='service/pharma.html'" class="custom-button">药品烟草运输</button>
+				<button onclick="location.href='service/pharma.html'" class="custom-button">
+					药品烟草运输
+				</button>
 			</section>
 			<section id="valuable" class="content">
-				<h2>贵重物品运输</h2>
+				<h1>贵重物品运输</h1>
 				<p>贵重物品运输板块的详细描述和内容。</p>
-				<button onclick="location.href='service/valuable.html'" class="custom-button">贵重物品运输</button>
+				<button onclick="location.href='service/valuable.html'" class="custom-button">
+					贵重物品运输
+				</button>
 			</section>
 		</main>
 	</body>
