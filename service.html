@@ -4,29 +4,66 @@
 		<title>服务页面</title>
 		<style>
 			/* 添加样式以适应你的需求 */
+			/* 添加样式以适应你的需求 */
 			body {
 				font-family: Arial, sans-serif;
 			}
+			.custom-button {
+				display: inline-block;
+				padding: 10px 20px;
+				font-size: 16px;
+				background-color: #337ab7;
+				color: #fff;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.custom-button:hover {
+				background-color: #23527c;
+			}
 
 			#sidebar {
+				position: fixed;
+				border-radius: 0.5em;
 				width: 200px;
 				background-color: #f0f0f0;
 				padding: 20px;
 				float: left;
 			}
 
+			#sidebar h2 {
+				color: #333;
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+
+			#sidebar ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			#sidebar li {
+				margin-bottom: 5px;
+			}
+
+			#sidebar li a {
+				border-radius: 0.5em;
+				display: block;
+				padding: 8px;
+				color: #333;
+				text-decoration: none;
+				transition: background-color 0.3s ease;
+			}
+
+			#sidebar li a:hover {
+				background-color: #ddd;
+			}
+
 			#content {
 				margin-left: 220px;
 				padding: 20px;
-			}
-			#content .content {
-				padding: 3em;
-				display: flex;
-				height: 100vh;
-				flex-direction: column;
-				flex-wrap: nowrap;
-				align-content: space-around;
-				align-items: center;
 			}
 
 			h2 {
@@ -35,6 +72,17 @@
 
 			p {
 				line-height: 1.5;
+			}
+
+			#content .content {
+				padding: 3em;
+				display: flex;
+				height: 100vh;
+				padding-top: 2em;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				align-content: space-around;
+				align-items: center;
 			}
 		</style>
 	</head>
@@ -52,29 +100,35 @@
 		</div>
 
 		<main id="content">
-			<section class="content">
-				<h2 id="urgent">急件配送</h2>
+			<section id="urgent" class="content">
+				<h2>急件配送</h2>
 				<p>急件配送板块的详细描述和内容。</p>
+				<button onclick="location.href='service/urgent.html'" class="custom-button">急件配送</button>
 			</section>
-			<section class="content">
-				<h2 id="general">普货运送</h2>
+			<section id="general" class="content">
+				<h2>普货运送</h2>
 				<p>普货运送板块的详细描述和内容。</p>
+				<button onclick="location.href='service/general.html'" class="custom-button">普货运送</button>
 			</section>
-			<section class="content">
-				<h2 id="poultry">禽类运输</h2>
+			<section id="poultry" class="content">
+				<h2>禽类运输</h2>
 				<p>禽类运输板块的详细描述和内容。</p>
+				<button onclick="location.href='service/poultry.html'" class="custom-button">禽类运输</button>
 			</section>
-			<section class="content">
-				<h2 id="perishable">鲜活运输</h2>
+			<section id="perishable" class="content">
+				<h2>鲜活运输</h2>
 				<p>鲜活运输板块的详细描述和内容。</p>
+				<button onclick="location.href='service/perishable.html'" class="custom-button">鲜活运输</button>
 			</section>
-			<section class="content">
-				<h2 id="pharma">药品烟草运输</h2>
+			<section id="pharma" class="content">
+				<h2>药品烟草运输</h2>
 				<p>药品烟草运输板块的详细描述和内容。</p>
+				<button onclick="location.href='service/pharma.html'" class="custom-button">药品烟草运输</button>
 			</section>
-			<section class="content">
-				<h2 id="valuable">贵重物品运输</h2>
+			<section id="valuable" class="content">
+				<h2>贵重物品运输</h2>
 				<p>贵重物品运输板块的详细描述和内容。</p>
+				<button onclick="location.href='service/valuable.html'" class="custom-button">贵重物品运输</button>
 			</section>
 		</main>
 	</body>
